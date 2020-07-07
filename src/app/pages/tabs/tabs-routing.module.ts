@@ -19,6 +19,10 @@ const routes: Routes = [
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
+      },
+      {
+        path: 'agregar/:listaId',
+        loadChildren: () => import('../agregar/agregar.module').then(m => m.AgregarPageModule)
       }
     ]
   },
